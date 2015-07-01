@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.ligneus.ru/</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/media/pdf/catalog.pdf</loc>
+  <lastmod>2013-08-26T11:23:26+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/main</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/categories/1</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/categories/2</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/categories/3</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/about</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/contacts</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/news/get_news/1</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/news/get_news/2</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/news</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/view/product/1</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/view/product/2</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/view/product/3</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/view/product/4</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.ligneus.ru/view/product/5</loc>
+  <changefreq>always</changefreq>
+</url>
+</urlset>

@@ -1,0 +1,229 @@
+-- MySQL dump 10.15  Distrib 10.0.19-MariaDB, for Linux (x86_64)
+--
+-- Host: localhost    Database: fabricum_ligneus
+-- ------------------------------------------------------
+-- Server version	10.0.19-MariaDB-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_title_en` varchar(30) DEFAULT NULL,
+  `cat_title_ru` varchar(30) DEFAULT NULL,
+  `cat_description` text,
+  `title_head` varchar(250) DEFAULT NULL,
+  `seo_snippet` text,
+  `keywords` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `categories`
+--
+
+LOCK TABLES `categories` WRITE;
+/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+INSERT INTO `categories` VALUES (1,'window','Окна','<p>Несомненное преимущество наших деревянных окон обуславливается не только соответствующей качеству ценой, но и:\n<ul>\n<li>- высокими тепло- и звукоизоляционными характеристиками;</li>\n<li>- качеством производимой продукции и ее долговечностью;</li>\n<li>- эстетикой и оригинальностью интерьера;</li>\n<li>- экологическими свойства.</li>\n</ul></p>\n<p>Окна изготавливаются из клееного бруса и массива различных пород дерева (сосна, дуб, лиственница, красное дерево (сипо)), что делает их экологически чистыми, безопасными для здоровья человека. Любые индивидуальные заказы наших клиентов мы выполняем вне зависимости от уровня сложности проекта. Возможен дополнительный дизайн с деревянными декоративными элементами и декорированным стеклом.</p> <p>Окна также могут производиться с алюминиевым профилем снаружи (BUG, Германия), главное предназначение которого - защита деревянной рамы от воздействия погодных условий. Возможна установка сетки от насекомых.</p>',NULL,'',''),(2,'door','Двери','<p><ul>Двери изготавливаются 68, 88 или 98 мм профиля, из клееного бруса и массива различных пород дерева (сосна, дуб, лиственница, красное дерево (сипо)), засчет чего прослужат не одно десятилетие и будут ежедневно радовать Вас.</ul></p>\n<p><ul>Заказы выполняются на основе индивидуальных пожеланий заказчика вне зависимости от уровня сложности проекта. Возможен дополнительный дизайн с деревянными декоративными элементами и декорированным стеклом.</ul></p>',NULL,'',''),(3,'system','Раздвижные&nbsp;системы','<p><ul>Раздвижная система 68, 88 или 98 мм профиля изготавливается из клееного бруса и массива различных пород дерева: сосны, дуба, лиственницы, красного дерева (сипо). Главный принцип, которому мы следуем в своей работе - это выполнение всех требований и пожеланий наших клиентов вне зависимрсти от уровня сложности заказов.</ul></p>\n<p><ul>Мы также можем предложить Вам раздвижные системы с алюминиевым профилем снаружи (BUG, Германия), который послужит защитой деревянной рамы от воздействия влаги, солнечных лучей, града.</ul></p>',NULL,'','');
+/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `examples`
+--
+
+DROP TABLE IF EXISTS `examples`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `examples` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_id` int(11) DEFAULT NULL,
+  `photo_name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `examples`
+--
+
+LOCK TABLES `examples` WRITE;
+/*!40000 ALTER TABLE `examples` DISABLE KEYS */;
+INSERT INTO `examples` VALUES (21,1,'11143268310.jpg'),(22,1,'3123219141533.jpg'),(23,1,'2013219113534.jpg'),(24,1,'101419323.jpg'),(25,1,'3530222511424.jpg'),(26,2,'332524263119.jpg'),(28,2,'259332462824.jpg'),(29,2,'11331932243124.jpg'),(30,2,'152824281530.jpg'),(31,2,'5277228274.jpg'),(32,3,'16151435291519.jpg'),(34,3,'2542014326.jpg'),(35,3,'1123112817626.jpg'),(36,3,'9282926283433.jpg'),(37,3,'281981228310.jpg');
+/*!40000 ALTER TABLE `examples` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `news`
+--
+
+DROP TABLE IF EXISTS `news`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `news_title` varchar(250) NOT NULL,
+  `news_text` text NOT NULL,
+  `news_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `news`
+--
+
+LOCK TABLES `news` WRITE;
+/*!40000 ALTER TABLE `news` DISABLE KEYS */;
+INSERT INTO `news` VALUES (1,'Наш сайт работает для Вас!','<p style=\"text-align: justify;\">Добрый день, уважаемые клиенты и просто гости страницы!</p>\n<p style=\"text-align: justify;\">&nbsp;</p>\n<p style=\"text-align: justify;\">Мы рады сообщить, что с сегодняшнего дня мы запускаем официальный сайт предприятия по производству высококачественных деревянных окон и дверей Ligneus. Мы приложим максимальные усилия для того, чтобы сделать сайт удобным и простым в использовании, а его работу &ndash; без сбоев и накладок. Здесь Вы найдете всю необходимую информацию о нашей компании и предлагаемой нами продукции.</p>\n<p style=\"text-align: justify;\">&nbsp;</p>\n<p style=\"text-align: justify;\">Наш сайт работает для Вас!</p>','2013-07-02'),(5,'Вредны ли пластиковые окна?','<p>Пластиковые окна уже давно стали нормой повседневной жизни, однако сейчас все чаще появляется вопрос вредят ли окна ПВХ экологии и здоровью человека. Реальны ли опасения?</p>\n<p>&nbsp;</p>\n<p>Покупая те или иные продукты в пластиковой упаковке, большинство из нас даже не задумывается о вредоносных компонентах такой емкости. Да, их концентрация настолько низка, что, по мнению членов программы по защите окружающей среды ООН, не наносит вреда человеческому здоровью, а но насколько она высока в составе профиля пластикового окна?</p>\n<p>&nbsp;</p>\n<p>Производители окон ПВХ добавляют в состав оконного профиля специальные стабилизаторы для предотвращения царапин и сохранения представительного внешнего вида. Довольно часто в производстве используется свинец, делающий пластик вредоносным, так что к подобной пластиковой продукции следует относиться с повышенным вниманием. А теплое помещение и высокая влажность воздуха способствуют выделению формальдегида, не говоря уже о плохих вентиляционных качествах пластиковых окон, усугубляющих ситуацию с выделением вредоносного яда формадельгида, который является одним из самых опасных для здоровья веществ.</p>','2013-10-28');
+/*!40000 ALTER TABLE `news` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pages`
+--
+
+DROP TABLE IF EXISTS `pages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pages` (
+  `id` int(3) NOT NULL AUTO_INCREMENT,
+  `title_en` varchar(30) DEFAULT NULL,
+  `title_ru` varchar(30) DEFAULT NULL,
+  `title_head` varchar(250) DEFAULT NULL,
+  `text` text,
+  `seo_snippet` text,
+  `keywords` varchar(250) DEFAULT NULL,
+  `sub_cat` int(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pages`
+--
+
+LOCK TABLES `pages` WRITE;
+/*!40000 ALTER TABLE `pages` DISABLE KEYS */;
+INSERT INTO `pages` VALUES (1,'main','Главная','Деревянные окна двери производство  продажа деревянных окон в Москве в Минске московская область.',NULL,'','',0),(2,'pruduct','Наша продукция',NULL,'',NULL,NULL,1),(3,'about','О нас',NULL,'<p>Наше предприятие было основано в 1991 году. Оно находится в экологически чистой части Европы &ndash; Литве, г. Кайшядорис, общая площадь которого - 14 000 м<sup>2</sup>. Производствона заводе полностью механизировано спецтехникой из Германии, а все работы выполняются только высококвалифицированными сотрудниками.</p>\n<p>Изготавливаемая нами продукция &ndash; это <a href=\"../categories/1\">деревянные окна</a> и <a href=\"../categories/2\">двери</a> европейского или скандинавского типа, производимые из массива сосны, дуба, лиственницы или красного дерева (сипо). Более 20 лет наша продукция экспортируется в различные страны Европы: Германию, Францию, Данию, Норвегию, Швецию, Великобританиюи сегодня мы хотим предложить наши деревянные окна и двери взыскательному российскому клиенту.</p>\n<p>Завод, вся его техника, материалыи продукция сертифицированы ISO 9001:2000 и СЕ. Это говорит о том, что производство и продукция отвечают всем нормам и стандартам Европейского союза.</p>\n<p>На протяжении десятилетий мы успешно производим <a href=\"../categories/1\">деревянные окна</a> и <a href=\"../categories/2\">двери</a> для Европы, где требования к продукции и качеству очень высоки. Европейские ценители уюта и изящества подтверждают свой выбор в пользу нашей продукции. Какой выбор сделаете Вы?</p>','','',0),(4,'contacts','Контакты','Контакты',NULL,'','',0);
+/*!40000 ALTER TABLE `pages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `prodimages`
+--
+
+DROP TABLE IF EXISTS `prodimages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `prodimages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `prod_id` int(11) DEFAULT NULL,
+  `image_name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `prodimages`
+--
+
+LOCK TABLES `prodimages` WRITE;
+/*!40000 ALTER TABLE `prodimages` DISABLE KEYS */;
+INSERT INTO `prodimages` VALUES (1,1,'68prod3.jpg'),(2,1,'68prod2.jpg'),(10,1,'3411315621.jpg'),(11,2,'141519309158.jpg'),(13,2,'2283522261126.jpg'),(14,2,'1632293301733.jpg'),(15,3,'88632331925.jpg'),(16,3,'33191813293318.jpg'),(17,3,'20212433278.jpg'),(18,4,'933251414531.jpg'),(20,4,'321620351511.jpg'),(21,4,'3917235165.jpg'),(22,5,'9312093368.jpg');
+/*!40000 ALTER TABLE `prodimages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `products`
+--
+
+DROP TABLE IF EXISTS `products`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cat_id` int(11) DEFAULT NULL,
+  `title_ru` varchar(70) DEFAULT NULL,
+  `title_head` varchar(70) DEFAULT NULL,
+  `prod_intro` text,
+  `prod_text` text,
+  `small_photo` varchar(30) DEFAULT NULL,
+  `pdf` varchar(30) DEFAULT NULL,
+  `status` int(1) DEFAULT NULL,
+  `seo_snippet` text,
+  `keywords` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `products`
+--
+
+LOCK TABLES `products` WRITE;
+/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES (1,1,'Деревянные окна 68 мм профиля',NULL,'Окна с двойным уплотнением и 24 мм однокамерным стеклопакетом UNIGLASS (Польша), а также фурнитурой ROTO FRANK AG (Германия) и петельными системами SIMONSWERK (Германия).','<p>24 мм однокамерный стеклопакет (UniGlass, Польша):</p>\n<ul>\n<li>1 селективное стекло (Pilkington, Германия);</li>\n<li>1 обычное стекло (Guarden, Чехия);</li>\n<li>заполненная аргоном камера (возможно заполнение криптоном).</li>\n</ul>\n<p>Двойное уплотнение для лучшей тепло- и звукоизоляции.</p>\n<p><strong>Теплоизоляция Uw:</strong> 1,4 W/m2K</p>\n<p><strong>Звукоизоляция Rw:</strong> 33 dB</p>\n<p>Тип открывания окна:</p>\n<ul>\n<li>открывающийся настеж - поворотный механизм позволяет настеж открыть створку;</li>\n<li>откидной - приоткрыть створку вверх для проветривания помещения;</li>\n<li>вентиляционный - створка приоткрывается на пару миллиметров, что позволяет постепенно проветривать помещение.</li>\n</ul>','3411315621.jpg','68_okno.pdf',NULL,'',''),(2,1,'Деревянные окна 88 мм профиля',NULL,'Окна с двойным уплотнением и 44 мм двухкамерным стеклопакетом UNIGLASS (Польша), а также фурнитурой ROTO FRANK AG (Германия) и петельными системами SIMONSWERK (Германия).','<p>44 мм двухкамерный стеклопакет (UniGlass, Польша):</p>\n<ul>\n<li>2 селективных стекла (Pilkington, Германия);</li>\n<li>1 обычное стекло (Guarden, Чехия);</li>\n<li>заполненная аргоном камера (возможно заполнение криптоном).</li>\n</ul>\n<p>Двойное уплотнение для лучшей тепло- и звукоизоляции.</p>\n<p><strong>Теплоизоляция Uw:</strong> 0,88 W/m2K</p>\n<p><strong>Звукоизоляция Rw:</strong> 35 dB</p>\n<p>Тип открывания окна:</p>\n<ul>\n<li>открывающийся настеж - поворотный механизм позволяет настеж открыть створку;</li>\n<li>откидной - приоткрыть створку вверх для проветривания помещения;</li>\n<li>вентиляционный - створка приоткрывается на пару миллиметров, что позволяет постепенно проветривать помещение.</li>\n</ul>','141519309158.jpg','88_okno.pdf',NULL,'',''),(3,1,'Деревянные окна 98 мм профиля',NULL,'Окна с двойным уплотнением и 54 мм двухкамерным стеклопакетом UNIGLASS (Польша), а также фурнитурой ROTO FRANK AG (Германия) и петельными системами SIMONSWERK (Германия).','<p>54 мм двухкамерный стеклопакет (UniGlass, Польша):</p>\n<ul>\n<li>2 селективных стекла (Pilkington, Германия);</li>\n<li>1 обычное стекло (Guarden, Чехия);</li>\n<li>заполненная аргоном камера (возможно заполнение криптоном).</li>\n</ul>\n<p>Двойное уплотнение для лучшей тепло- и звукоизоляции.</p>\n<p><strong>Теплоизоляция Uw:</strong> 0,86 W/m2K</p>\n<p><strong>Звукоизоляция Rw:</strong> 36 dB</p>\n<p>Тип открывания окна:</p>\n<ul>\n<li>открывающийся настеж - поворотный механизм позволяет настеж открыть створку;</li>\n<li>откидной - приоткрыть створку вверх для проветривания помещения;</li>\n<li>вентиляционный - створка приоткрывается на пару миллиметров, что позволяет постепенно проветривать помещение.</li>\n</ul>','88632331925.jpg','98_okno.pdf',NULL,'',''),(4,2,'Деревянные двери 68, 88 или 98 мм профиля',NULL,'Используются высококачественные детали, петельные системы SIMONSWERK (Германия) с возможностью регулировки дверей и фурнитура ROTO FRANK AG (Германия).','<p>Двери изготавливаются 68, 88 или 98 мм профиля.</p>\n<p>Используются высококачественные детали:</p>\n<ul>\n<li>петельные системы SIMONSWERK (Германия) с возможностью регулировки дверей;</li>\n<li>фурнитура ROTO FRANK AG (Германия).</li>\n</ul>\n<p>Двери со стеклом комплектуются стеклопакетом, обладающие теми же техническими характеристиками, что и оконные.</p>','933251414531.jpg','dvery.pdf',NULL,'',''),(5,3,'Деревянные раздвижные системы 68, 88 или 98 мм профиля',NULL,'Используются высококачественные детали: фурнитура ROTO FRANK AG (Германия). Стеклопакеты обладают теми же техническими характеристиками, что и оконные.','<p>Раздвижные системы изготавливаются 68, 88 или 98 мм профиля.</p>\n<p>Используются высококачественные детали:</p>\n<ul>\n<li>фурнитура ROTO FRANK AG (Германия).</li>\n</ul>\n<p>Деверянные створки легко и удобно сдвигаются, герметично примыкая друг к другу - узкий порог.</p>\n<p>Стеклопакеты обладают теми же техническими характеристиками, что и оконные.</p>','9312093368.jpg','systemi.pdf',NULL,'','');
+/*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `settings`
+--
+
+DROP TABLE IF EXISTS `settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `settings` (
+  `id` int(1) NOT NULL AUTO_INCREMENT,
+  `site_name` varchar(100) DEFAULT NULL,
+  `main_adress` varchar(250) DEFAULT NULL,
+  `email` varchar(70) DEFAULT NULL,
+  `branch_adress` text,
+  `main_head` varchar(140) DEFAULT NULL,
+  `seo_snippet` text,
+  `keywords` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `settings`
+--
+
+LOCK TABLES `settings` WRITE;
+/*!40000 ALTER TABLE `settings` DISABLE KEYS */;
+INSERT INTO `settings` VALUES (1,'Сайт об окнах','<p>+7 (499) 40 60 560<br />119049, Москва,<br /> ул. Крымский Вал, д. 8, корп. 2<br /><a href=\"mailto:info@ligneus.ru\">info@ligneus.ru</a></p>','info@ligneus.ru','<p>RiCHMAN&trade; <br />Дмитрий Гаранин<br />г. Минск<br />моб.: +375 (29) 645 45 89<br /><a href=\"mailto:info@richman.by\">info@richman.by</a></p>\n<p>ООО БИО-Архитектура<br /> Александр Аверин<br />г. Санкт-Петербург<br /> моб.: + 7 (911) 005 30 03<br /> <a href=\"mailto:info@bio-a.ru\">info@bio-a.ru</a></p>','Деревянные окна двери производство  продажа деревянных окон в Москве в Минске московская область.','Компания Ligneus предлагает высококачественные деревянные двери и окна, которые придадут зданию не только эффектный и уютный вид, но и дополнительную безопасность с точки зрения экологии и здоровья людей.','деревянные окна, деревянные окна цены, деревянные стеклопакеты, деревянные окна со стеклопакетами, деревянные окна для дачи, деревянные окна москва, продажа деревянных окон минск, деревянные окна производство, деревянные окна купить, элитные деревянные окна, дешевые деревянные окна, деревянные окна ');
+/*!40000 ALTER TABLE `settings` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'fabricum_ligneus'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2015-07-01 13:22:46

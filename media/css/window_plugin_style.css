@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-----------  plugin_category --------*/
+
+#cat_plugin {
+	width:860px;
+	height:280px;
+	margin:0 auto;}
+	
+.slides_area {
+	width:550px;
+	height:260px;
+	position:relative;
+	overflow:hidden;
+	float:left;}
+	
+.slides_area img {
+	position:relative;}
+
+	
+.image_area {
+	background:url(../images/cat_plaugin_img_bg.png) center no-repeat;
+	width:290px;
+	height:260px;
+	float:left;
+	position:relative;}
+	
+
+.numbers {
+	width:23px;
+	height:23px;
+	line-height:23px;
+	font-size:14px;
+	color:white;
+	cursor:pointer;
+	position:absolute;
+	background:url(../images/botton-plugin-pg.png) center no-repeat;}
+	
+#n1 {
+	left:100px;
+	top:190px;}
+
+#n2 {
+	left:220px;
+	top:200px;}
+
+#n3 {
+	left:180px;
+	top:210px;}
+
+#n4 {
+	left:180px;
+	top:130px;}
+	
+#n5 {
+	left:60px;
+	top:30px;}
+
+	
+.num_active {
+	background:url(../images/botton-plugin-pg.png) top no-repeat;}
+	
+.numbers:hover {
+	background:url(../images/botton-plugin-pg.png) bottom no-repeat}

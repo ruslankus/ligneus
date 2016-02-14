@@ -19,9 +19,9 @@ return array
 			 * Ports and sockets may be appended to the hostname.
 			 */
 			'hostname'   => 'localhost',
-			'database'   => 'inlu_ligneus',
-			'username'   => 'inlu_ligneus',
-			'password'   => 'g5bME9Zx',
+			'database'   => 'goodpric_ligneus',
+			'username'   => 'goodpric_ligneus',
+			'password'   => 'CykstiIstariukas',
 			'persistent' => FALSE,
 		),
 		'table_prefix' => '',

@@ -93,7 +93,7 @@ if (isset($_SERVER['KOHANA_ENV']))
 Cookie::$salt = '123456';
  
 Kohana::init(array(
-	'base_url'   => 'http://ligneus.inlu.net/',
+	'base_url'   => 'http://ligneus.prophp.eu/',
     'index_file' => false,
 
 ));
